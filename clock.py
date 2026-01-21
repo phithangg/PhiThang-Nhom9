@@ -111,3 +111,4 @@ while True:
         break
 
 cv.destroyAllWindows()
+# em nhờ AI hỗ trợ
