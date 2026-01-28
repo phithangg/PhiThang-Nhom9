@@ -19,10 +19,10 @@ def add_muoi_tieu(img, ratio=0.02):
     nosy = img.copy()
     soluong = int(ratio*img.size)
 
-    #cho muoi vao
+    #them muoi
     toado = [np.random.randint(0, i-1 ,soluong) for i in img.shape]
     nosy[ toado[0], toado[1] ] = 255
-    # cho tieu vao
+    # them tieu
     toado = [np.random.randint(0, i-1 ,soluong) for i in img.shape]
     nosy[ toado[0], toado[1] ] = 0
 
@@ -34,7 +34,6 @@ if __name__=="__main__":
     img = read_img_url(url)
     img2 = cv.cvtColor(img, cv.COLOR_RGB2GRAY)
 
-    # cv.line(img2, (0,500), (200,500),2)
     cv.imshow("img", img2)
     cv.waitKey(0)
     cv.destroyAllWindows()
