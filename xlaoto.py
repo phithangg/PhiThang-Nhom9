@@ -29,7 +29,6 @@ def add_muoi_tieu(img, ratio=0.02):
     return nosy
 
 if __name__=="__main__":
-    # img = cv.imread("lacotoquoc.png",cv.IMREAD_COLOR)
 
     url = "https://raw.githubusercontent.com/udacity/CarND-LaneLines-P1/master/test_images/solidWhiteCurve.jpg"
     img = read_img_url(url)
@@ -70,57 +69,3 @@ if __name__=="__main__":
     cv.imshow("detected_lane", img_line)
     cv.waitKey()
     cv.destroyAllWindows()
-    # print(w,h)
-    # n_img = edge[w//2-150:w//2+150,  h//2-150:h//2 +150]
-    # cv.imshow("edge", n_img)
-    # cv.waitKey(0)
-    # cv.destroyAllWindows()
-
-
-
-    # url = "https://raw.githubusercontent.com/opencv/opencv/refs/heads/4.x/samples/data/lena.jpg"
-    # url = "https://raw.githubusercontent.com/udacity/CarND-LaneLines-P1/master/test_images/solidWhiteCurve.jpg"
-    # img = read_img_url(url)
-
-    # edge = cv.Canny(img, 50, 150)
-    # cv.imshow("edge", edge)
-    # cv.waitKey(0)
-    # cv.destroyAllWindows()
-    
-    # img2 = add_muoi_tieu(img,0.02)
-    # cv.imwrite("giaothong.jpg",img2)
-    # anh_goc = read_img_url(url)
-    # anh_nam = add_noise(anh_goc)
-    # anh_muoi_tieu = add_muoi_tieu(anh_goc, 0.03)
-    # img2 = anh_muoi_tieu.copy()
-    # clean_img = cv.blur(img2, (3,3)) #lam sach nhieu
-    # img3 = np.concatenate((anh_muoi_tieu, clean_img), axis=1)
-    # cv.imshow("img3",img3)
-    # cv.waitKey(0)
-    # cv.destroyAllWindows()
-    # img5 = anh_muoi_tieu.copy()
-    # clean_img = cv.medianBlur(img5, 5) # phuong thuc lam sach thu 2
-    # img6 = np.concatenate((anh_muoi_tieu,  clean_img, anh_goc ), axis=1)
-    # cv.imshow("img3",img6)
-    # cv.waitKey(0)
-    # cv.destroyAllWindows()
-
-    # ed1 = cv.Canny(anh_muoi_tieu, 50, 150 )
-    # ed2 = cv.Canny(clean_img, 50, 150 )
-    # ed3 = cv.Canny(anh_goc, 50, 150 )
-    # img7 = np.concatenate((ed1,  ed2, ed3 ), axis=1)    
-    # cv.imshow("img7",img7)
-    # cv.waitKey(0)
-    # cv.destroyAllWindows()
-
-
-                
-
-    # cv.imshow("img4",anh_muoi_tieu)
-    # cv.waitKey(0)
-    # cv.destroyAllWindows()
-    
-    # img5 = np.concatenate((anh_goc, anh_nam, anh_muoi_tieu ), axis=1)
-    # cv.imshow("img5", img5)
-    # cv.waitKey()
-    # cv.destroyAllWindows()
